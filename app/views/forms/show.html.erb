@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Date issued:</b>
+  <%= @form.date_issued %>
+</p>
+
+<p>
+  <b>Issued to:</b>
+  <%= @form.issued_to %>
+</p>
+
+<p>
+  <b>From:</b>
+  <%= @form.from %>
+</p>
+
+<p>
+  <b>Subject:</b>
+  <%= @form.subject %>
+</p>
+
+<p>
+  <b>Why:</b>
+  <%= @form.why %>
+</p>
+
+<p>
+  <b>Answer:</b>
+  <%= @form.answer %>
+</p>
+
+<p>
+  <b>Sign by:</b>
+  <%= @form.sign_by %>
+</p>
+
+<p>
+  <b>Issued by:</b>
+  <%= @form.issued_by %>
+</p>
+
+
+<%= link_to 'Edit', edit_form_path(@form) %> |
+<%= link_to 'Back', forms_path %>

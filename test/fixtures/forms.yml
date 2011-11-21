@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  date_issued: 2011-11-21
+  issued_to: MyString
+  from: MyString
+  subject: MyString
+  why: MyText
+  answer: MyText
+  sign_by: MyString
+  issued_by: MyString
+
+two:
+  date_issued: 2011-11-21
+  issued_to: MyString
+  from: MyString
+  subject: MyString
+  why: MyText
+  answer: MyText
+  sign_by: MyString
+  issued_by: MyString
