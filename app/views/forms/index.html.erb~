@@ -2,8 +2,8 @@
 <br />
 <br />
 <div id="link1">
-<%= link_to 'listing Service', forms_path %>||
-<%= link_to 'Create New Service', new_form_path %>
+<%= link_to 'All Memo', forms_path %>||
+<%= link_to 'Issued Memo', new_form_path %>
 </div>
 <div id="link">
 <%= link_to "Sign out",  destroy_user_session_path,  :method=> :delete %> ||
@@ -11,17 +11,13 @@
 </div>
 <br />
 <br />
-<h1>Listing forms</h1>
-
 <table>
   <tr>
     <th>Date issued</th>
     <th>Issued to</th>
-    <th>From</th>
+    
     <th>Subject</th>
-    <th>Why</th>
-    <th>Answer</th>
-    <th>Sign by</th>
+    
     <th>Issued by</th>
     <th></th>
     <th></th>
@@ -32,20 +28,18 @@
   <tr>
     <td><%= form.date_issued %></td>
     <td><%= form.issued_to %></td>
-    <td><%= form.from %></td>
+  
     <td><%= form.subject %></td>
-    <td><%= form.why %></td>
-    <td><%= form.answer %></td>
-    <td><%= form.sign_by %></td>
+   
     <td><%= form.issued_by %></td>
-    <td><%= link_to 'Show', form %></td>
+    <!--<td><%= link_to 'Show', form %></td>-->
     <td><%= link_to 'Edit', edit_form_path(form) %></td>
-    <td><%= link_to 'Destroy', form, :confirm => 'Are you sure?', :method => :delete %></td>
+    <!--<td><%= link_to 'Destroy', form, :confirm => 'Are you sure?', :method => :delete %></td>-->
   </tr>
 <% end %>
 </table>
 
 <br />
+<%= paginate @forms %>
 
-<%= link_to 'New Form', new_form_path %>
 </div>

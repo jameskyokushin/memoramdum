@@ -2,8 +2,8 @@
 <br />
 <br />
 <div id="link1">
-<%= link_to 'listing Service', forms_path %>||
-<%= link_to 'Create New Service', new_form_path %>
+<%= link_to 'All Memo', forms_path %>||
+<%= link_to 'Issued Memo', new_form_path %>
 </div>
 <div id="link">
 <%= link_to "Sign out",  destroy_user_session_path,  :method=> :delete %> ||
@@ -13,49 +13,46 @@
 <br />
 <p id="notice"><%= notice %></p>
 
-<p>
+<h4>
   <b>Date issued:</b>
   <%= @form.date_issued %>
-</p>
+</h4>
 
-<p>
+<h4>
   <b>Issued to:</b>
   <%= @form.issued_to %>
-</p>
+</h4>
 
-<p>
+<h4>
   <b>From:</b>
   <%= @form.from %>
-</p>
+</h4>
 
-<p>
+<h4>
   <b>Subject:</b>
-  <%= @form.subject %>
-</p>
+  <%= @form.subject  %>
+</h4>
 
-<p>
+<h4>
   <b>Why:</b>
   <%= @form.why %>
-</p>
+</h4>
 
-<p>
+<h4>
   <b>Answer:</b>
   <%= @form.answer %>
-</p>
+</h4>
 
-<p>
+<h4>
   <b>Sign by:</b>
   <%= @form.sign_by %>
-</p>
+</h4>
 
-<p>
+<h4>
   <b>Issued by:</b>
   <%= @form.issued_by %>
-</p>
+</h4>
 
 
-
-<%= link_to 'Edit', edit_form_path(@form) %> |
-<%= link_to 'Back', forms_path %>
 
 </div>

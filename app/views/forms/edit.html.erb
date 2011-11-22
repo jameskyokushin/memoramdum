@@ -11,18 +11,44 @@
 </div>
 <br />
 <br />
+<h4>
+  <b>Date issued:</b>
+  <%= @form.date_issued %>
+</h4>
+
+<h4>
+  <b>Issued to:</b>
+  <%= @form.issued_to %>
+</h4>
+
+<h4>
+  <b>From:</b>
+  <%= @form.from %>
+</h4>
+
+<h4>
+  <b>Subject:</b>
+  <%= @form.subject  %>
+</h4>
+
+<h4>
+  <b>Why:</b>
+  <%= @form.why %>
+</h4>
+
 <%= semantic_form_for(@form) do |f| %>
   <%= f.inputs do %>
-  <%= f.input :date_issued %>
-  <%= f.input :issued_to, :input_html => { :style => "display:readonly;" } %>
-  <%= f.input :from %>
-  <%= f.input :subject %>
-  <%= f.input :why, :input_html => { :rows => 4 } %>
-  <%= f.input :issued_by %>
+  <%= f.input :answer, :input_html => { :rows => 4 } %>
+  <%= f.input :sign_by, :hint => "Complete Your Name for Verification " %>
   <% end %> 
-  <%= f.buttons %> 
+  <div><%= f.submit " Submit " %> </div>
 <% end %>
+<br />
+<h4>
+  <b>Issued by:</b>
+  <%= @form.issued_by %>
+</h4>
 
-<%= link_to 'Show', @form %> |
-<%= link_to 'Back', forms_path %>
+
+
 </div>
