@@ -2,8 +2,8 @@
 <br />
 <br />
 <div id="link1">
-<%= link_to 'listing Service', services_path %>||
-<%= link_to 'Create New Service', new_service_path %>
+<%= link_to 'listing Service', forms_path %>||
+<%= link_to 'Create New Service', new_form_path %>
 </div>
 <div id="link">
 <%= link_to "Sign out",  destroy_user_session_path,  :method=> :delete %> ||

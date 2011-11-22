@@ -1,9 +1,20 @@
-<h1>Editing form</h1>
-
+<div id="form1">
+<br />
+<br />
+<div id="link1">
+<%= link_to 'listing Service', forms_path %>||
+<%= link_to 'Create New Service', new_form_path %>
+</div>
+<div id="link">
+<%= link_to "Sign out",  destroy_user_session_path,  :method=> :delete %> ||
+<%= current_user.email if user_signed_in? %>
+</div>
+<br />
+<br />
 <%= semantic_form_for(@form) do |f| %>
   <%= f.inputs do %>
   <%= f.input :date_issued %>
-  <%= f.input :issued_to, :wrapper_html => { :style => "display:readonly;" } %>
+  <%= f.input :issued_to, :input_html => { :style => "display:readonly;" } %>
   <%= f.input :from %>
   <%= f.input :subject %>
   <%= f.input :why, :input_html => { :rows => 4 } %>
@@ -14,3 +25,4 @@
 
 <%= link_to 'Show', @form %> |
 <%= link_to 'Back', forms_path %>
+</div>

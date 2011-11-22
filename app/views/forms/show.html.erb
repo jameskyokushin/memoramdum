@@ -1,3 +1,16 @@
+<div id="form1">
+<br />
+<br />
+<div id="link1">
+<%= link_to 'All Memo', forms_path %>||
+<%= link_to 'Issued Memo', new_form_path %>
+</div>
+<div id="link">
+<%= link_to "Sign out",  destroy_user_session_path,  :method=> :delete %> ||
+<%= current_user.email if user_signed_in? %>
+</div>
+<br />
+<br />
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -39,18 +52,10 @@
   <b>Issued by:</b>
   <%= @form.issued_by %>
 </p>
-<%= semantic_form_for(@form) do |f| %>
-  <%= f.inputs do %>
-  <%= f.input :date_issued %>
-  <%= f.input :issued_to %>
-  <%= f.input :from %>
-  <%= f.input :subject %>
-  <%= f.input :why, :input_html => { :rows => 4 } %>
-  <%= f.input :issued_by %>
-  <% end %> 
-  <%= f.buttons %> 
-<% end %>
+
 
 
 <%= link_to 'Edit', edit_form_path(@form) %> |
 <%= link_to 'Back', forms_path %>
+
+</div>

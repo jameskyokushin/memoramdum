@@ -1,3 +1,16 @@
+<div id="form1">
+<br />
+<br />
+<div id="link1">
+<%= link_to 'listing Service', forms_path %>||
+<%= link_to 'Create New Service', new_form_path %>
+</div>
+<div id="link">
+<%= link_to "Sign out",  destroy_user_session_path,  :method=> :delete %> ||
+<%= current_user.email if user_signed_in? %>
+</div>
+<br />
+<br />
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -41,5 +54,8 @@
 </p>
 
 
+
 <%= link_to 'Edit', edit_form_path(@form) %> |
 <%= link_to 'Back', forms_path %>
+
+</div>
