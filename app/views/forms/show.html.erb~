@@ -39,17 +39,6 @@
   <b>Issued by:</b>
   <%= @form.issued_by %>
 </p>
-<%= semantic_form_for(@form) do |f| %>
-  <%= f.inputs do %>
-  <%= f.input :date_issued %>
-  <%= f.input :issued_to %>
-  <%= f.input :from %>
-  <%= f.input :subject %>
-  <%= f.input :why, :input_html => { :rows => 4 } %>
-  <%= f.input :issued_by %>
-  <% end %> 
-  <%= f.buttons %> 
-<% end %>
 
 
 <%= link_to 'Edit', edit_form_path(@form) %> |

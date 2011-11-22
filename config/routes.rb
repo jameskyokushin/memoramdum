@@ -1,4 +1,6 @@
 Memoramdum::Application.routes.draw do
+  devise_for :users
+
   resources :forms
 
   ActiveAdmin.routes(self)

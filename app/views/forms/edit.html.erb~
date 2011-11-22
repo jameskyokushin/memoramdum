@@ -3,7 +3,7 @@
 <%= semantic_form_for(@form) do |f| %>
   <%= f.inputs do %>
   <%= f.input :date_issued %>
-  <%= f.input :issued_to, :input_html => { :style => "display:readonly;" } %>
+  <%= f.input :issued_to, :wrapper_html => { :style => "display:readonly;" } %>
   <%= f.input :from %>
   <%= f.input :subject %>
   <%= f.input :why, :input_html => { :rows => 4 } %>
