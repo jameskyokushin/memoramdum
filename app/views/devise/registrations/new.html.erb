@@ -7,7 +7,7 @@
 
 <%= semantic_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= f.inputs "Sign up" do %>
-  <%= f.input :email %>
+  <%= f.input :email, :hint => "Please use your asi.com.ph account" %>
   <%= f.input :password %>
   <%= f.input :password_confirmation %>
   <% end %>
