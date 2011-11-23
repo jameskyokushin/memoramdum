@@ -3,7 +3,7 @@
 <br />
 <div id="link1">
 <%= link_to 'All Memo', forms_path %>||
-<%= link_to 'Issued Memo', new_form_path %>
+<%= link_to 'Issue Memo', new_form_path %>
 </div>
 <div id="link">
 <%= link_to "Sign out",  destroy_user_session_path,  :method=> :delete %> ||
@@ -14,7 +14,7 @@
 <%= semantic_form_for(@form) do |f| %>
   <%= f.inputs do %>
   <%= f.input :date_issued %>
-  <%= f.input :issued_to %>
+  <%= f.input :issued_to, :label => "Issue To" %>
   <%= f.input :from, :collection => [[" ","ADMIN"]], :include_blank => false, :wrapper_html => { :style => "display:none;" } %>
   <%= f.input :subject %>
   <%= f.input :why, :input_html => { :rows => 4 } %>

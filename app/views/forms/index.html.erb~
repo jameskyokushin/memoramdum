@@ -3,7 +3,7 @@
 <br />
 <div id="link1">
 <%= link_to 'All Memo', forms_path %>||
-<%= link_to 'Issued Memo', new_form_path %>
+<%= link_to 'Issue Memo', new_form_path %>
 </div>
 <div id="link">
 <%= link_to "Sign out",  destroy_user_session_path,  :method=> :delete %> ||
@@ -19,6 +19,7 @@
     <th>Subject</th>
     
     <th>Issued by</th>
+    <th>Sign By</th>
     <th></th>
     <th></th>
     <th></th>
@@ -32,6 +33,7 @@
     <td><%= form.subject %></td>
    
     <td><%= form.issued_by %></td>
+    <td><%= form.sign_by %></td>
     <td><%= link_to 'View', form %></td>
     <td><%= link_to 'Answer Memo', edit_form_path(form) %></td>
     <!--<td><%= link_to 'Destroy', form, :confirm => 'Are you sure?', :method => :delete %></td>-->

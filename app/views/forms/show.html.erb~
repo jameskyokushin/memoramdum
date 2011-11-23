@@ -1,3 +1,16 @@
+<div id="form1">
+<br />
+<br />
+<div id="link1">
+<%= link_to 'All Memo', forms_path %>||
+<%= link_to 'Issue Memo', new_form_path %>
+</div>
+<div id="link">
+<%= link_to "Sign out",  destroy_user_session_path,  :method=> :delete %> ||
+<%= current_user.email if user_signed_in? %>
+</div>
+<br />
+<br />
 
 <h4>
   <b>Date issued:</b>

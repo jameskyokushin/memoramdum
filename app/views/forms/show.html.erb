@@ -3,7 +3,7 @@
 <br />
 <div id="link1">
 <%= link_to 'All Memo', forms_path %>||
-<%= link_to 'Issued Memo', new_form_path %>
+<%= link_to 'Issue Memo', new_form_path %>
 </div>
 <div id="link">
 <%= link_to "Sign out",  destroy_user_session_path,  :method=> :delete %> ||
@@ -18,7 +18,7 @@
 </h4>
 
 <h4>
-  <b>Issued to:</b>
+  <b>Issue to:</b>
   <%= @form.issued_to %>
 </h4>
 
