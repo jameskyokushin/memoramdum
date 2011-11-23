@@ -32,8 +32,8 @@
     <td><%= form.subject %></td>
    
     <td><%= form.issued_by %></td>
-    <!--<td><%= link_to 'Show', form %></td>-->
-    <td><%= link_to 'Edit', edit_form_path(form) %></td>
+    <td><%= link_to 'View', form %></td>
+    <td><%= link_to 'Answer Memo', edit_form_path(form) %></td>
     <!--<td><%= link_to 'Destroy', form, :confirm => 'Are you sure?', :method => :delete %></td>-->
   </tr>
 <% end %>
