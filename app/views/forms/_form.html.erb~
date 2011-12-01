@@ -3,7 +3,7 @@
 <br />
 <div id="link1">
 <%= link_to 'All Memo', forms_path %>||
-<%= link_to 'Issued Memo', new_form_path %>
+<%= link_to 'Issue Memo', new_form_path %>
 </div>
 <div id="link">
 <%= link_to "Sign out",  destroy_user_session_path,  :method=> :delete %> ||
@@ -19,6 +19,7 @@
   <%= f.input :subject %>
   <%= f.input :why, :input_html => { :rows => 4 } %>
   <%= f.input :issued_by, :collection => [["- Auto Generated -","  ",current_user.email]], :wrapper_html => { :style => "display:none;" }, :include_blank => false %>
+  <%= f.input :status, :collection => Forms.status_collection, :include_blank => false, :wrapper_html => { :style => "display:none;" } %>
   <% end %> 
   <%= f.buttons %> 
 <% end %>

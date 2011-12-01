@@ -18,8 +18,9 @@
     
     <th>Subject</th>
     
-    <th>Issued by</th>
+    <th>Issue by</th>
     <th>Sign By</th>
+    <th>Status</th>
     <th></th>
     <th></th>
     <th></th>
@@ -34,6 +35,7 @@
    
     <td><%= form.issued_by %></td>
     <td><%= form.sign_by %></td>
+    <td><%= service.status %></td>
     <td><%= link_to 'View', form %></td>
     <td><%= link_to 'Answer Memo', edit_form_path(form) %></td>
     <!--<td><%= link_to 'Destroy', form, :confirm => 'Are you sure?', :method => :delete %></td>-->
