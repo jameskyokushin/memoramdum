@@ -11,7 +11,7 @@
 </div>
 <br />
 <br />
-
+<!--
 <h4>
   <b>Date issued:</b>
   <%= @form.date_issued %>
@@ -51,7 +51,7 @@
   <b>Issued by:</b>
   <%= @form.issued_by %>
 </h4>
-
+-->
 
 
 </div>
@@ -59,7 +59,7 @@
   <p>&nbsp;</p>
   <div align="left">
 
-     <table width="950" border="0">
+     <table width="500" border="0">
       <tr>
         <td width="10"><p>&nbsp;</p></td>
         <td width="235"><strong>ME MORANDUM 2011-0001</strong></td>
@@ -86,7 +86,7 @@
 
       <tr>
         <td>&nbsp;</td>
-        <td><label><strong>SUBJECT&nbsp;:</strong></label></td>
+        <td><label><strong>SUBJECT</strong></label></td>
         <td><%= @form.subject  %></td>
       </tr>
       </table>
@@ -98,15 +98,15 @@
       <tr>
         <td width="10">&nbsp;</td>
         <td width="116"><strong><%= @form.why %> </strong></td>
-        <td width="112"><%= @form.why %>&nbsp;</td>
+        <td width="112"></td>
 
       </tr>
       </table>
     <table width="500" height="30" border="0">
       <tr>
         <td width="10">&nbsp;</td>
-        <td width="117"><strong>ANSWER:</strong></td>
-        <td width="113"><%= @form.answer %>&nbsp;</td>
+        <td width="117"><strong><%= @form.answer %></strong></td>
+        <td width="113"></td>
       </tr>
 
     </table>
