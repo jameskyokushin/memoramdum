@@ -19,7 +19,7 @@
   <%= f.input :subject %>
   <%= f.input :why, :input_html => { :rows => 4 } %>
   <%= f.input :issued_by, :collection => [["- Auto Generated -","  ",current_user.email]], :wrapper_html => { :style => "display:none;" }, :include_blank => false %>
-  <%= f.input :status, :collection => Forms.status_collection, :include_blank => false, :wrapper_html => { :style => "display:none;" } %>
+  <%= f.input :status, :collection => Form.status_collection, :include_blank => false, :wrapper_html => { :style => "display:none;" } %>
   <% end %> 
   <%= f.buttons %> 
 <% end %>
