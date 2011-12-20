@@ -1,16 +1,16 @@
 ActiveAdmin.register Form do
  
- action_item :only => :show do
-    link_to "DONE", collection_form_admin_form_path(resource)
-  end
+ #action_item :only => :show do
+    #link_to "DONE", collection_form_admin_form_path(resource)
+  #end
 
-  member_action :collection_form do
-    @form = Form.find(params[:id])
-    @form.status = Form::STATUS_DONE
-    @form.save
+  #member_action :collection_form do
+  #  @form = Form.find(params[:id])
+  #  @form.status = Form::STATUS_DONE
+  #  @form.save
     
-    redirect_to admin_form_path(@form), :notice => "Email will be send to Admin"
-  end
+  #  redirect_to admin_form_path(@form), :notice => "Email will be send to Admin"
+  #end
 
   scope :all, :default => true
 
@@ -18,8 +18,8 @@ ActiveAdmin.register Form do
     forms.where( :status => Form::STATUS_NOTANSWER )
   end
 
-  scope :DONE do |forms|
-    forms.where(:status => Form::STATUS_DONE )
+  scope :DONE do |form|
+    form.where(:status => Form::STATUS_DONE )
   end  
 
  form do |f|
@@ -30,7 +30,7 @@ ActiveAdmin.register Form do
       f.input :subject
       f.input :why, :input_html => { :rows => 4 }
       f.input :issued_by, :collection => [["- Auto Generated -","Admin"]], :wrapper_html => { :style => "display:none;" }, :include_blank => false
-      f.input :status, :collection => Form.status_collection, :include_blank => false, :wrapper_html => { :style => "display:none;" }
+      f.input :status, :collection => Form.status_collection, :include_blank => false
     end 
    f.buttons
   end 
