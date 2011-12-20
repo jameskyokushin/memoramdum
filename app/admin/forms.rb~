@@ -18,8 +18,8 @@ ActiveAdmin.register Form do
     forms.where( :status => Form::STATUS_NOTANSWER )
   end
 
-  scope :DONE do |forms|
-    forms.where(:status => Form::STATUS_DONE )
+  scope :DONE do |form|
+    form.where(:status => Form::STATUS_DONE )
   end  
 
  form do |f|
