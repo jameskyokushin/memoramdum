@@ -1,6 +1,6 @@
 ActiveAdmin::Dashboards.build do
 
-  section "Latest Issued Memo" do
+  section "Latest Services" do
     table_for Form.order('created_at desc').limit(5).all do |t|
       t.column("Status") { |form| status_tag form.status, form.status_tag }
       t.column("Company") { |form|form.issued_to }
