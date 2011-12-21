@@ -39,7 +39,7 @@
 <%= semantic_form_for(@form) do |f| %>
   <%= f.inputs do %>
   <%= f.input :answer, :input_html => { :rows => 4 } %>
-  <%= f.input :sign_by  %>
+  <%= f.input :sign_by, :collection => [["- Auto Generated -","  ",current_user.email]], :wrapper_html => { :style => "display:none;" }, :include_blank => false  %>
   <% end %> 
   <div><%= f.submit " Submit " %> </div>
 <% end %>
